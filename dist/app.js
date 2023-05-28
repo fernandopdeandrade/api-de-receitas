@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
+const cors = require("cors");
+const ErrorHandler_1 = require("./Middlewares/ErrorHandler");
+const Users_Routes_1 = require("./Routes/Users.Routes");
+const Drink_Routes_1 = require("./Routes/Drink.Routes");
+const Meal_Routes_1 = require("./Routes/Meal.Routes");
+const DrinkCategory_Routes_1 = require("./Routes/DrinkCategory.Routes");
+const MealCategory_Routes_1 = require("./Routes/MealCategory.Routes");
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/images', express.static(`${__dirname}/../public/images`));
+app.use(Users_Routes_1.default);
+app.use(Drink_Routes_1.default);
+app.use(Meal_Routes_1.default);
+app.use(DrinkCategory_Routes_1.default);
+app.use(MealCategory_Routes_1.default);
+app.use(ErrorHandler_1.default.handle);
+exports.default = app;
+//# sourceMappingURL=app.js.map

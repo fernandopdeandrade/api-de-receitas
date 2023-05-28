@@ -1,0 +1,17 @@
+{
+    "name": "app-recipes",
+    "version": 2,
+    "public": true,
+    "builds": [
+        {
+            "src": "dist/server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/dist/server.js"
+        }
+    ]
+}
