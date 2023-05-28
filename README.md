@@ -8,4 +8,4 @@ Back-end - api de receitas
 - ADMIN_PASSWORD="senha-do-administrador"
 - JWT_SECRET="secret"
 - PORT=3001
-- MONGO_DB_URL="mongodb+srv://<seu-usuário-mongoDB>:<sua-senha-do-banco-mongoDB>@cluster0.vu5bq4e.mongodb.net/"
+- MONGO_DB_URL="mongodb+srv://"seu-usuário-mongoDB":"sua-senha-do-banco-mongoDB"@cluster0.vu5bq4e.mongodb.net/"
